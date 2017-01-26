@@ -27,8 +27,8 @@ public class StartScreen {
 	public static BufferedImage background = new BufferedImage(GameManager.getWidth(), GameManager.getHeight(),
 			BufferedImage.TYPE_INT_RGB);
 	public static int[] pixelLocation = ((DataBufferInt) background.getRaster().getDataBuffer()).getData();
-	private static int[] pixels;
-	private int xOffset, yOffset;
+	//private static int[] pixels;
+	//private int xOffset, yOffset;
 	/*private BufferStrategy bufferStrategy;
 	private BufferedImage background = new BufferedImage(GameManager.getWidth(), GameManager.getHeight(), BufferedImage.TYPE_INT_RGB);
 	private int[] pixels = ((DataBufferInt)background.getRaster().getDataBuffer()).getData();*/
