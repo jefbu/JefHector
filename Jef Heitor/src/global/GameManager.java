@@ -55,6 +55,7 @@ public abstract class GameManager {
 	
 
 public static void main (String[] args){
+	System.out.println("wat");
 	gameModeId = 1;
 	gameStart = new GameStart ();
 	
