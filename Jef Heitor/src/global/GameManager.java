@@ -55,8 +55,7 @@ public abstract class GameManager {
 	
 
 public static void main (String[] args){
-	System.out.println("wat");
-	System.out.println("Trump é um babaca");
+
 	gameModeId = 1;
 	gameStart = new GameStart ();
 	

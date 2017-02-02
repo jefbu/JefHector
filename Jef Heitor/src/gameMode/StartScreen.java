@@ -20,6 +20,7 @@ import level.Level;
 
 public class StartScreen {
 	
+	
 	Level level = new Level();
 	Screen screen = new Screen();
 
