@@ -23,6 +23,7 @@ public class GameStart extends Canvas implements Runnable {
 
 	public GameStart() {
 			
+		System.out.println("O Heitor conseguiu");
 		//Disable for full screen
 		Dimension size = new Dimension (width * scale, height * scale);
 		//Disable for full screen
