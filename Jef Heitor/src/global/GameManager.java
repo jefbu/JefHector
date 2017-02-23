@@ -2,15 +2,16 @@ package global;
 
 import java.awt.image.BufferStrategy;
 
-
 import gameMode.StartScreen;
+import gameMode.WorldMap;
 
 public abstract class GameManager {
 
 	public static GameStart gameStart = new GameStart();
 	public static BufferStrategy bufferStrate;
 	static byte gameModeId;
-	static Object gameMode = new StartScreen(); // 1 = StartScreen
+	static Object gameMode99 = new StartScreen(); // 99 = StartScreen
+	static Object gameMode1 = new WorldMap(); // 1 = WorldMap
 	
 	static void gameIterate() {
 		
@@ -18,8 +19,18 @@ public abstract class GameManager {
 			
 			bufferStrate = gameStart.getBufferStrategy();
 			
-			((StartScreen) gameMode).update();
-			((StartScreen) gameMode).render();
+			((WorldMap) gameMode1).update();
+			((WorldMap) gameMode1).render();
+			
+			
+		}
+		
+		if (gameModeId == 99) {
+			
+			bufferStrate = gameStart.getBufferStrategy();
+			
+			((StartScreen) gameMode99).update();
+			((StartScreen) gameMode99).render();
 			
 			
 		}
@@ -56,7 +67,6 @@ public abstract class GameManager {
 
 public static void main (String[] args){
 
-	System.out.println("O Heitor vai conseguir");
 	gameModeId = 1;
 	gameStart = new GameStart ();
 	
