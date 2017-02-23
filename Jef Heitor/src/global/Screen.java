@@ -1,7 +1,5 @@
 package global;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
@@ -25,22 +23,6 @@ public class Screen {
 
 	public static void render(int width, int height) {
 		
-
-		attributeArray();
-		bufferStrategy = GameManager.bufferStrate;
-		if (bufferStrategy == null) {
-			System.out.println("bs is null");
-			GameManager.createBufferStrategy(3);
-			return;
-		}
-
-		Graphics g = bufferStrategy.getDrawGraphics();
-		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, GameManager.getWidth(), GameManager.getHeight());
-		g.drawImage(background, 0, 0, null);
-		g.dispose();
-		bufferStrategy.show();
-
 
 
 	}
