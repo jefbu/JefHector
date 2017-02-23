@@ -13,7 +13,7 @@ public class GameStart extends Canvas implements Runnable {
 	public static int width = 800;
 	public static int height = width / 16 * 9;
 	public static int scale = 1;
-	private JFrame frame;
+	public JFrame frame;
 	private Thread thread;
 	private boolean running = false;
 	private long oldSysTime;
@@ -23,7 +23,7 @@ public class GameStart extends Canvas implements Runnable {
 
 	public GameStart() {
 			
-		System.out.println("O Heitor conseguiu");
+		System.out.println("GameStart Start");
 		//Disable for full screen
 		Dimension size = new Dimension (width * scale, height * scale);
 		//Disable for full screen
@@ -69,7 +69,7 @@ public class GameStart extends Canvas implements Runnable {
 		//long fps = System.currentTimeMillis();
 		oldSysTime = System.currentTimeMillis();
 		//int count = 0;
-		System.out.println("ok");
+		System.out.println("game start run");
 		requestFocus();
 		while (running == true){
 			if ((System.currentTimeMillis() - oldSysTime)>16){
