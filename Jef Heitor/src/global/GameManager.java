@@ -1,7 +1,9 @@
 package global;
 
+import java.awt.Frame;
 import java.awt.image.BufferStrategy;
 
+import gameMode.GameMode;
 import gameMode.StartScreen;
 import gameMode.WorldMap;
 
@@ -9,9 +11,9 @@ public abstract class GameManager {
 
 	public static GameStart gameStart = new GameStart();
 	public static BufferStrategy bufferStrate;
-	static byte gameModeId;
-	static Object gameMode99 = new StartScreen(); // 99 = StartScreen
-	static Object gameMode1 = new WorldMap(); // 1 = WorldMap
+	static byte gameModeId = 0;
+	static GameMode gameMode0 = new StartScreen(); // 0 = StartScreen
+	static GameMode gameMode1 = new WorldMap(); 
 	
 	static void gameIterate() {
 		
@@ -19,28 +21,30 @@ public abstract class GameManager {
 			
 			bufferStrate = gameStart.getBufferStrategy();
 			
-			((WorldMap) gameMode1).update();
-			((WorldMap) gameMode1).render();
+			gameMode1.update();
+			gameMode1.render();
 			
 			
 		}
 		
-		if (gameModeId == 99) {
+		else if (gameModeId == 0) {
 			
 			bufferStrate = gameStart.getBufferStrategy();
 			
-			((StartScreen) gameMode99).update();
-			((StartScreen) gameMode99).render();
+			gameMode0.update();
+			gameMode0.render();
 			
 			
 		}
+				
+	}
+	
+	public static void setGameModeId (byte id){
 		
-		
-		
-		
-		
+		gameModeId = id;
 		
 	}
+
 	
 	public static void createBufferStrategy(int numBuffer){
 		
@@ -63,11 +67,15 @@ public abstract class GameManager {
 		
 	}
 	
+	public static Frame getFrame(){
+		
+		return gameStart.frame;
+	}
+	
 	
 
 public static void main (String[] args){
 
-	gameModeId = 1;
 	gameStart = new GameStart ();
 	
 	gameStart.start();

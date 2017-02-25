@@ -9,7 +9,7 @@ import global.GameManager;
 import global.Screen;
 import level.WorldMapLevel;
 
-public class WorldMap {
+public class WorldMap implements GameMode{
 	
 	WorldMapLevel worldMapLevel = new WorldMapLevel("path");
 	Screen screen = new Screen();
