@@ -12,9 +12,9 @@ public class WorldMapLevel extends Level {
 	
 	private int[] levelPixels;
 	
-	public WorldMapLevel (String path) {
+	public WorldMapLevel () {
 		
-		super(path);
+		super();
 		
 	}
 	
@@ -43,12 +43,10 @@ public void generateLevel() {
 	
 	for (int i = 0; i < levelPixels.length; i++) {
 		if (levelPixels[i] == 0xff00FF00) {
-			System.out.println("GREEN");
 			tiles[i] = TileCollection.grassTile;
 		}
 		if (levelPixels[i] == 0xffff0000) {
 			tiles[i] = TileCollection.voidTile;
-			System.out.println("RED");
 		}
 		
 	}
