@@ -17,7 +17,7 @@ public abstract class GameManager {
 	
 	static void gameIterate() {
 		
-		if (gameModeId == 1) {
+		if (gameModeId == 0) {
 			
 			bufferStrate = gameStart.getBufferStrategy();
 			
@@ -27,7 +27,7 @@ public abstract class GameManager {
 			
 		}
 		
-		else if (gameModeId == 0) {
+		else if (gameModeId == 1) {
 			
 			bufferStrate = gameStart.getBufferStrategy();
 			
