@@ -54,6 +54,7 @@ public class WorldMap implements GameMode{
 		for (int i = 0; i < worldMapLevel.tiles.length; i++) {
 			worldMapLevel.tiles[i].render(0, 0, screen);
 		}
+		System.out.println("So pra mostrar");
 		g.drawImage(background, 0, 0, null);
 		g.dispose();
 
