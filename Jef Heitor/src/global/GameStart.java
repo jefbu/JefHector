@@ -23,6 +23,7 @@ public class GameStart extends Canvas implements Runnable {
 
 	public GameStart() {
 			
+
 		System.out.println("GameStart Start");
 		//Disable for full screen
 		Dimension size = new Dimension (width * scale, height * scale);
@@ -69,6 +70,7 @@ public class GameStart extends Canvas implements Runnable {
 		//long fps = System.currentTimeMillis();
 		oldSysTime = System.currentTimeMillis();
 		//int count = 0;
+
 		System.out.println("game start run");
 		requestFocus();
 		while (running == true){

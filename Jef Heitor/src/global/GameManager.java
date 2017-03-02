@@ -5,22 +5,24 @@ import java.awt.image.BufferStrategy;
 
 import gameMode.GameMode;
 import gameMode.StartScreen;
+import gameMode.WorldMap;
 
 public abstract class GameManager {
 
 	public static GameStart gameStart = new GameStart();
 	public static BufferStrategy bufferStrate;
 	static byte gameModeId = 0;
-	static GameMode gameMode = new StartScreen(); // 0 = StartScreen
+	static GameMode gameMode0 = new StartScreen(); // 0 = StartScreen
+	static GameMode gameMode1 = new WorldMap(); 
 	
 	static void gameIterate() {
 		
-		if (gameModeId == 2) {
+		if (gameModeId == 1) {
 			
 			bufferStrate = gameStart.getBufferStrategy();
 			
-			gameMode.update();
-			gameMode.render();
+			gameMode1.update();
+			gameMode1.render();
 			
 			
 		}
@@ -29,17 +31,12 @@ public abstract class GameManager {
 			
 			bufferStrate = gameStart.getBufferStrategy();
 			
-			gameMode.update();
-			gameMode.render();
+			gameMode0.update();
+			gameMode0.render();
 			
 			
 		}
-		
-		
-		
-		
-		
-		
+				
 	}
 	
 	public static void setGameModeId (byte id){
@@ -79,8 +76,8 @@ public abstract class GameManager {
 
 public static void main (String[] args){
 
-	System.out.println("Main start");
-
+	gameStart = new GameStart ();
+	
 	gameStart.start();
 		
 			

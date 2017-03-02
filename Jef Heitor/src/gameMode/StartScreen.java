@@ -63,7 +63,6 @@ public class StartScreen implements ActionListener, GameMode {
 
 	public void render() {
 
-		System.out.println("render StartScreen");
 		Screen.eraseScreen();
 
 		bufferStrategy = GameManager.bufferStrate;
@@ -118,8 +117,6 @@ public class StartScreen implements ActionListener, GameMode {
 		g.setColor(color3);
 		g.drawRect(sWidth - width / 2, sHeight + 2 * height / 3 + 2, width, height / 3);
 		g.drawString("Exit", sWidth - width / 2, sHeight + 3 * height / 3);
-
-		System.out.println("render Menu");
 
 	}
 

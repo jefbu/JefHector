@@ -7,6 +7,7 @@ import graphics.tiles.Tile;
 
 public class Level {
 	boolean x = false;
+	public Tile[] tiles;
 	
 	
 	public Level() {
