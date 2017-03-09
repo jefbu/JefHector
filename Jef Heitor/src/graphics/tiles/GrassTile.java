@@ -12,7 +12,7 @@ public class GrassTile extends Tile{
 	
 	public void render (int x, int y, Screen screen){
 		
-		screen.renderTile(x, y, this);
+		screen.renderTile(x<<5, y<<5, this);
 	}
 	
 

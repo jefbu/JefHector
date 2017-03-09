@@ -4,7 +4,7 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 
-import gameMode.StartScreen;
+import gameMode.WorldMap;
 import graphics.tiles.Tile;
 
 public class Screen {
@@ -63,7 +63,7 @@ public class Screen {
 					break;
 				}
 					
-					StartScreen.pixelLocation[xa + ya * GameManager.getWidth()] = tile.sprite.getPixels()[x + y * tile.sprite.getSIZEW()];
+					WorldMap.pixelLocation[xa + ya * GameManager.getWidth()] = tile.sprite.getPixels()[x + y * tile.sprite.getSIZEW()];
 				
 			}
 			
