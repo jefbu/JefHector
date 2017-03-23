@@ -1,5 +1,6 @@
 package gameMode;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
@@ -37,9 +38,7 @@ public class WorldMap implements GameMode{
 	
 	
 	public void render() {
-		
-		System.out.println("Ele chegou aqui");
-		
+				
 		Screen.eraseScreen();
 		
 		bufferStrategy = GameManager.bufferStrate;
@@ -51,9 +50,14 @@ public class WorldMap implements GameMode{
 		
 		Graphics g = bufferStrategy.getDrawGraphics();
 		
-		for (int i = 0; i < worldMapLevel.tiles.length; i++) {
-			worldMapLevel.tiles[i].render(0, 0, screen);
-			System.out.println(i);
+		int x1 = GameManager.getWidth() + 32 >> 5;
+		int y1 = GameManager.getHeight() + 32 >> 5;
+
+		
+		for (int y = 0; y < y1 ; y++) {
+			for (int x = 0; x < x1; x++) {
+			worldMapLevel.tiles[x + y].render(x, y, screen);
+			}
 		}
 		
 		g.drawImage(background, 0, 0, null);

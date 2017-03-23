@@ -75,8 +75,6 @@ public abstract class GameManager {
 	
 
 public static void main (String[] args){
-
-	gameStart = new GameStart ();
 	
 	gameStart.start();
 		

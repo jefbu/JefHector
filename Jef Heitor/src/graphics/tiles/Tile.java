@@ -22,5 +22,9 @@ public class Tile {
 		
 		return false;
 	}
+	
+	public void changeSprite(Tile tile, String path) {
+		
+	}
 
 }

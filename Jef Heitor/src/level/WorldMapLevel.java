@@ -10,7 +10,7 @@ import graphics.tiles.Tile;
 
 public class WorldMapLevel extends Level {
 	
-	private int[] levelPixels;
+	int[] levelPixels;
 	
 	public WorldMapLevel () {
 		
@@ -28,7 +28,7 @@ public void loadLevel(String path){
 		levelPixels = new int[w * h];
 		worldMapImage.getRGB(0, 0, w, h, levelPixels, 0, w); 
 		
-		generateLevel();
+		generateLevel(levelPixels, tiles);
 	}
 	
 	catch (IOException e) {
@@ -39,7 +39,7 @@ public void loadLevel(String path){
 		
 	}
 
-public void generateLevel() {
+public void generateLevel(int[] levelPixels, Tile[] tiles) {
 	
 	for (int i = 0; i < levelPixels.length; i++) {
 		if (levelPixels[i] == 0xff00FF00) {
